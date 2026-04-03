@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Auto Studio | Detailing & Service</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left"></div>
+    <div class="nav-center">
+      <span class="nav-link"><i class="fa-brands fa-instagram"></i> INSTAGRAM</span>
+      <span class="nav-link"><i class="fa-solid fa-phone"></i> APELEAZĂ</span>
+    </div>
+    <div class="nav-right">
+      <button class="btn-minimal" id="openCartBtn">
+        DEVIZ (<span id="cartCount">0</span>)
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="smoke-overlay"></div>
+    <div class="hero-content scroll-appear">
+      <h1 class="hero-title">PERFORMANȚĂ <span class="glow-text">&</span> PRECIZIE</h1>
+      <h2 class="hero-subtitle">STUDIO PROFESIONAL DE DETAILING ȘI MENTENANȚĂ</h2>
+      <div class="hero-spacer"></div>
+      <a href="#servicii" class="btn-neon hero-btn">DESCOPERĂ SERVICIILE</a>
+    </div>
+  </header>
+
+  <section class="trust-bar">
+    <div class="trust-item"><span><i class="fa-solid fa-shield-check"></i> AUTORIZAT RAR</span></div>
+    <div class="trust-item"><span><i class="fa-solid fa-award"></i> GARANȚIE 24 LUNI</span></div>
+    <div class="trust-item"><span><i class="fa-solid fa-gem"></i> CERTIFICAT CERAMIC</span></div>
+    <div class="trust-item"><span><i class="fa-solid fa-microchip"></i> DIAGNOZĂ OEM</span></div>
+  </section>
+
+  <section class="process-section scroll-appear">
+    <div class="menu-header">
+      <span class="eyebrow">Transparență Totală</span>
+      <h2 class="section-title">CUM LUCRĂM</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h4>RECEPȚIE</h4>
+        <p>Evaluăm starea mașinii și efectuăm diagnoza inițială detaliată.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h4>DEVIZ</h4>
+        <p>Primești lista de operațiuni și costurile exacte, fără costuri ascunse.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h4>EXECUȚIE</h4>
+        <p>Specialiștii noștri intervin folosind tehnologie și produse de top.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h4>LIVRARE</h4>
+        <p>Predăm mașina verificată impecabil, curată și cu garanție inclusă.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-menu" id="servicii">
+    <div class="menu-header scroll-appear">
+      <span class="eyebrow">Standarde Înalte</span>
+      <h2 class="section-title">SERVICII</h2>
+    </div>
+
+    <div class="menu-list">
+      
+      <div class="service-block scroll-appear">
+        <div class="service-header"><h3>Detailing Premium</h3></div>
+        <div class="variants-container">
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Detailing Interior Complet</span><span class="variant-price">450 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('d1', -1)">-</button><span id="qty-d1">1</span><button class="qty-btn" onclick="updateQty('d1', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('d1', 'Detailing Interior', 450)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Polish Exterior (3 Pași)</span><span class="variant-price">1200 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('d2', -1)">-</button><span id="qty-d2">1</span><button class="qty-btn" onclick="updateQty('d2', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('d2', 'Polish Exterior', 1200)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Protecție Ceramică (Garanție 2 Ani)</span><span class="variant-price">1500 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('d3', -1)">-</button><span id="qty-d3">1</span><button class="qty-btn" onclick="updateQty('d3', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('d3', 'Protecție Ceramică', 1500)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Igienizare Ozon (Sistem Climatizare)</span><span class="variant-price">100 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('d4', -1)">-</button><span id="qty-d4">1</span><button class="qty-btn" onclick="updateQty('d4', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('d4', 'Igienizare Ozon', 100)">ADĂUGARE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-block scroll-appear">
+        <div class="service-header"><h3>Mecanică & Mentenanță</h3></div>
+        <div class="variants-container">
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Revizie Standard (Manoperă)</span><span class="variant-price">200 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('m1', -1)">-</button><span id="qty-m1">1</span><button class="qty-btn" onclick="updateQty('m1', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('m1', 'Revizie Standard', 200)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Schimb Plăcuțe Frână (Punte)</span><span class="variant-price">120 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('m2', -1)">-</button><span id="qty-m2">1</span><button class="qty-btn" onclick="updateQty('m2', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('m2', 'Schimb Plăcuțe', 120)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Inspecție Tren Rulare</span><span class="variant-price">150 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('m3', -1)">-</button><span id="qty-m3">1</span><button class="qty-btn" onclick="updateQty('m3', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('m3', 'Inspecție Tren Rulare', 150)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Schimb Ulei Cutie Automată</span><span class="variant-price">600 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('m4', -1)">-</button><span id="qty-m4">1</span><button class="qty-btn" onclick="updateQty('m4', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('m4', 'Schimb Ulei Cutie', 600)">ADĂUGARE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-block scroll-appear">
+        <div class="service-header"><h3>Diagnoză & Electrică</h3></div>
+        <div class="variants-container">
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Diagnoză Computerizată Completă</span><span class="variant-price">100 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('e1', -1)">-</button><span id="qty-e1">1</span><button class="qty-btn" onclick="updateQty('e1', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('e1', 'Diagnoză OBD', 100)">ADĂUGARE</button>
+            </div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-info"><span class="service-name">Adaptări & Codări Module</span><span class="variant-price">150 <small>RON</small></span></div>
+            <div class="variant-actions">
+              <div class="qty-selector"><button class="qty-btn" onclick="updateQty('e2', -1)">-</button><span id="qty-e2">1</span><button class="qty-btn" onclick="updateQty('e2', 1)">+</button></div>
+              <button class="btn-add-neon" onclick="addToCart('e2', 'Codare Module', 150)">ADĂUGARE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="vip-section scroll-appear">
+    <div class="menu-header">
+      <span class="eyebrow">Exclusivitate</span>
+      <h2 class="section-title">ABONAMENTE VIP</h2>
+    </div>
+    <div class="vip-grid">
+      <div class="vip-card">
+        <h3>SILVER CLUB</h3>
+        <p>2 x Spălări Detailing / lună</p>
+        <p>Verificare lichide gratuită</p>
+        <div class="vip-price">250 <small>RON / lună</small></div>
+      </div>
+      <div class="vip-card featured">
+        <div class="badge">CEL MAI POPULAR</div>
+        <h3>GOLD CLUB</h3>
+        <p>4 x Spălări Detailing / lună</p>
+        <p>Igienizare Ozon inclusă</p>
+        <div class="vip-price">450 <small>RON / lună</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section scroll-appear">
+    <div class="menu-header">
+      <span class="eyebrow">Profesioniști</span>
+      <h2 class="section-title">ECHIPA NOASTRĂ</h2>
+    </div>
+    <div class="team-list-clean">
+      <div class="team-item"><h4>MARIUS IONESCU</h4><p>Master Detailer</p></div>
+      <div class="team-item"><h4>VLAD STAN</h4><p>Diagnostician OEM</p></div>
+      <div class="team-item"><h4>ANDREI POPA</h4><p>Tehnician Mecanic</p></div>
+    </div>
+  </section>
+
+  <section class="contact-section scroll-appear">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2 class="section-title" style="color: #ffffff; text-align: left; margin-bottom: 25px;">CONTACT</h2>
+        <div class="contact-detail">
+          <strong>LOCAȚIE:</strong>
+          <p>București, Str. Exemplului nr. 12</p>
+        </div>
+        <div class="contact-detail">
+          <strong>PROGRAM:</strong>
+          <p>L-V: 09:00 - 18:00 | S: 09:00 - 14:00</p>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d182348.6506300438!2d25.927658705353526!3d44.437926919730594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f93abf3cad4f%3A0xac0632e37c9ca628!2sBucure%C8%99ti!5e0!3m2!1sro!2sro!4v1713028345678!5m2!1sro!2sro" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>DEVIZ ESTIMATIV</h3>
+      <button class="close-cart" id="closeCartBtn">✕</button>
+    </div>
+    <div class="cart-body" id="cartItemsContainer"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>TOTAL ESTIMAT</span>
+        <span id="cartTotalValue">0 <small>RON</small></span>
+      </div>
+      <button class="btn-neon w-100" id="confirmBookingBtn" style="margin-top:20px; font-size:12px;">PROGRAMEAZĂ</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
